@@ -1,0 +1,28 @@
+.flight-item {
+  display: flex;
+}
+
+.path {
+  display: flex;
+}
+
+.path__item {
+  display: flex;
+}
+
+.flight-item__logo {
+  width: 42px;
+  height: 42px;
+}
+
+.flight-item__steps {
+  padding: 16px;
+}
+
+.duration {
+  padding: 16px;
+}
+
+.cost {
+  padding: 16px;
+}
