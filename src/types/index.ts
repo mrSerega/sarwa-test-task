@@ -1,1 +1,1 @@
-export type { Project } from './Project'
+export * from './Project'

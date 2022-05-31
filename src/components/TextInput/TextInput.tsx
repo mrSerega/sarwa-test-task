@@ -8,5 +8,5 @@ export const TextInput: FC<TextInputProps> = ({
   onChange
 }) => {
   const handleChange = useCallback((evt: ChangeEvent<HTMLInputElement>) => onChange(evt.target.value), [onChange])
-  return <input data-testid={TextInputTestId} value={value} onChange={handleChange} />
+  return <input data-testid={TextInputTestId} type='text' value={value} onChange={handleChange} />
 }
