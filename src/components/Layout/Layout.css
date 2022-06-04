@@ -1,0 +1,14 @@
+.layout__header {
+  position: absolute;
+  width: calc(100% - 72px);
+  margin: 36px;
+  padding-bottom: 36px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: black solid 1px;
+}
+
+.layout__logo {
+  font-size: 30px;
+  font-weight: 900;
+}

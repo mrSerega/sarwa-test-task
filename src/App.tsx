@@ -4,13 +4,16 @@ import {
 } from "react-router-dom";
 
 import './App.css';
+import { Layout } from "./components";
 import { Projects } from "./pages";
 
 
 function App() {
-  return <Routes>
-    <Route path='/projects' element={<Projects/>} />
-  </Routes>
+  return <Layout>
+    <Routes>
+      <Route path='/projects' element={<Projects/>} />
+    </Routes>
+  </Layout>
 }
 
   

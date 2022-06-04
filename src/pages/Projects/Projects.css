@@ -1,0 +1,30 @@
+.projects__upper {
+  display: flex;
+  background-image: url('/public/media/work-background.jpg');
+  padding: 96px 42px 44px 64px;
+  background-size: cover;
+}
+
+.projects__work {
+  font-weight: 400;
+  font-size: 400px;
+  line-height: 573px;
+  color: #000000;
+}
+
+.projects__view-case {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.projects__options {
+  margin: 72px 56px 80px 52px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.projects__toggle {
+  margin: 5px 0 0 20px;
+}
+

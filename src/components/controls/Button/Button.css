@@ -1,0 +1,16 @@
+.MuiButton-sizeSmall.button {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color:#000000;
+}
+
+.MuiButton-sizeLarge.button {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 17px;
+  color: #FFFFFF;
+  background: #0C0C0C;
+  padding: 19px 42px;
+  border-radius: 0;
+}

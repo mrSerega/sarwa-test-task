@@ -1,0 +1,1 @@
+export const DEFAULT_EMPTY_LABEL = 'pick a value'

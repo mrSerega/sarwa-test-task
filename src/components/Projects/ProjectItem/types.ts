@@ -1,3 +1,3 @@
-import { Project } from "../../types";
+import { Project } from "../../../types";
 
 export interface ProjectItemProps extends Project {}

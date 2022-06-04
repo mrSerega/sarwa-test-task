@@ -1,0 +1,17 @@
+.select {
+  display: flex;
+}
+
+.select__label {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 43px;
+  height: 100%;
+  color: #A3A3A3;
+}
+
+.MuiInput-root.select__options {
+  margin-left: 6px;
+  font-weight: 400;
+  font-size: 30px;
+}

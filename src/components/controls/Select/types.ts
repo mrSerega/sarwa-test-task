@@ -1,5 +1,6 @@
 export interface SelectProps {
-  initialValue: string[]
+  defaultValue: string[]
   options: string[]
   onChange: (value: string[]) => void
+  emptyLabel?: string
 }
