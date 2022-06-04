@@ -8,10 +8,7 @@ import './Layout.css'
 
 const className = 'layout'
 
-export const LayoutView: FC<LayoutViewProps> = ({onMenuClick, children}) => {
-  console.log(children)
-  
-  return <div className={className}>
+export const LayoutView: FC<LayoutViewProps> = ({onMenuClick, children}) => <div className={className}>
     <div className={className + '__header'}>
       <div className={className + '__logo'}>
         DEPT
@@ -20,4 +17,3 @@ export const LayoutView: FC<LayoutViewProps> = ({onMenuClick, children}) => {
     </div>
     {children}
   </div>
-}

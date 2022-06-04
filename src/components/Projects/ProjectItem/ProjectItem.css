@@ -22,7 +22,6 @@
   font-size: 15px;
   line-height: 18px;
   font-weight: 700;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .project-item__title {
@@ -30,7 +29,6 @@
   font-size: 30px;
   line-height: 42px;
   font-weight: 400;
-  font-family: 'Teko';
   color: #0E0E0E;
 }
 
@@ -40,6 +38,5 @@
   font-size: 14px;
   line-height: 16px;
   color: #1A18F7;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
 }

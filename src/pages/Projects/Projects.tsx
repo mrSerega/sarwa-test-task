@@ -1,4 +1,4 @@
-import { FC, useCallback, useMemo, useState } from "react";
+import { FC, useCallback, useMemo } from "react";
 import {
   useSearchParams,
   createSearchParams
@@ -20,20 +20,23 @@ export const Projects: FC = () => {
   , [searchParams])
 
   const { isLoading, data } = useGetProjects({
-    industries
+    industries,
+    categories
   })
 
   const handleChangeIndustries = useCallback((values: string[]) => {
     setSearchParams(createSearchParams({
       industry: values,
+      category: categories
     }))
-  }, [setSearchParams])
+  }, [setSearchParams, categories])
 
   const handleChangeCategories = useCallback((values: string[]) => {
     setSearchParams(createSearchParams({
       category: values,
+      industry: industries
     }))
-  }, [setSearchParams])
+  }, [setSearchParams, industries])
 
   return (
     <div>
@@ -45,6 +48,7 @@ export const Projects: FC = () => {
       </div>
       <div className={className + '__options'}>
         <Select 
+          label="in"
           defaultValue={industries} 
           onChange={handleChangeIndustries}
           options={Object.keys(ProjectIndustry)} 
@@ -52,7 +56,7 @@ export const Projects: FC = () => {
         />
         <div className={className + '__toggle'}>
           <Select 
-          
+            label="Show me"
             defaultValue={categories} 
             onChange={handleChangeCategories}
             options={Object.keys(ProjectCategory)} 

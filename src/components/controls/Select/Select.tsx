@@ -13,6 +13,7 @@ export const Select: FC<SelectProps> = ({
   onChange,
   options,
   defaultValue,
+  label,
   emptyLabel = DEFAULT_EMPTY_LABEL
 }) => {
 
@@ -25,18 +26,18 @@ export const Select: FC<SelectProps> = ({
   const handleClose = useCallback(() => onChange(value), [onChange, value])
 
   const renderValue = useCallback((val: string[]) => {
-    if (val.length === 0) {
+    if (val.length === 0 || val.length === options.length) {
       return emptyLabel
     }
     if (val.length === 1) {
       return val
     }
     return `${val.length} items`
-  }, [emptyLabel])
+  }, [emptyLabel, options])
 
   return <div className={className}>
     <div className={className+'__label'}>
-      in
+      {label}
     </div>
     <MaterialSelect
       variant="standard"

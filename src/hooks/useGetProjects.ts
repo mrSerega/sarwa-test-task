@@ -14,9 +14,11 @@ type UseGetProjects = {
 }
 
 export const useGetProjects = ({
-  industries
+  industries,
+  categories
 }: {
   industries: string[]
+  categories: string[]
 }): UseGetProjects => {
   const [resp, setResp] = useState<UseGetProjects>({
     isLoading: true,
@@ -31,7 +33,8 @@ export const useGetProjects = ({
     })
 
     const params = createSearchParams({
-      industries
+      industry: industries,
+      category: categories
     })
 
     fetch(`/projects?${params.toString()}`)
@@ -42,7 +45,7 @@ export const useGetProjects = ({
           data
         })
       })
-  }, [industries])
+  }, [industries, categories])
 
   return resp
 }
