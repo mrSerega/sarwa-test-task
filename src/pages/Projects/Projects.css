@@ -1,5 +1,6 @@
 .projects__upper {
   display: flex;
+  justify-content: space-around;
   background-image: url('/public/media/work-background.jpg');
   padding: 96px 42px 44px 64px;
   background-size: cover;
@@ -10,12 +11,22 @@
   font-size: 400px;
   line-height: 573px;
   color: #000000;
+  text-align: center;
 }
 
 .projects__view-case {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+
+.projects__lower {
+  display: flex;
+  justify-content: space-around;
+}
+
+.projects__lower-content {
+  max-width: 1052px;
 }
 
 .projects__options {
@@ -25,6 +36,41 @@
 }
 
 .projects__toggle {
-  margin: 5px 0 0 20px;
+  margin: 0 0 0 20px;
 }
+
+
+@media (max-width: 990px) {
+  .projects__upper {
+    padding: 0;
+    flex-direction: column;
+    background-image: none;
+  }
+
+  .projects__work {
+    margin-top: 56px;
+    padding: 16px 0 0 24px;
+    background-image: url('/public/media/work-background.jpg');
+    background-size: cover;
+    font-size: 170px;
+    line-height: 244px;
+  }
+
+  .projects__view-case {
+    margin: 16px;
+  }
+}
+
+@media (max-width: 848px) {
+  .projects__options {
+    margin: 22px 16px 16px 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projects__toggle {
+    margin: 20px 0 0 0;
+  }
+}
+
 

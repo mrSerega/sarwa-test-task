@@ -46,25 +46,29 @@ export const Projects: FC = () => {
           <Button label="VIEW CASE" onClick={() => console.log('VIEW CASE CLICK!')} size="large" />
         </div>
       </div>
-      <div className={className + '__options'}>
-        <Select 
-          label="in"
-          defaultValue={industries} 
-          onChange={handleChangeIndustries}
-          options={Object.keys(ProjectIndustry)} 
-          emptyLabel="all industries"
-        />
-        <div className={className + '__toggle'}>
-          <Select 
-            label="Show me"
-            defaultValue={categories} 
-            onChange={handleChangeCategories}
-            options={Object.keys(ProjectCategory)} 
-            emptyLabel="all work"
-          />
+      <div className={className + '__lower'}>
+        <div className={className + '__lower-content'}>
+          <div className={className + '__options'}>
+            <Select 
+              label="in"
+              defaultValue={industries} 
+              onChange={handleChangeIndustries}
+              options={Object.keys(ProjectIndustry)} 
+              emptyLabel="all industries"
+            />
+            <div className={className + '__toggle'}>
+              <Select 
+                label="Show me"
+                defaultValue={categories} 
+                onChange={handleChangeCategories}
+                options={Object.keys(ProjectCategory)} 
+                emptyLabel="all work"
+              />
+            </div>
+          </div>
+          {isLoading ? <>'Loading...'</> : <ProjectGrid list={data} />}
         </div>
       </div>
-      {isLoading ? <>'Loading...'</> : <ProjectGrid list={data} />}
     </div>
   );
 }

@@ -12,3 +12,12 @@
   font-size: 30px;
   font-weight: 900;
 }
+
+@media (max-width: 990px) {
+  .layout__header {
+    width: calc(100% - 36px);
+    margin: 12px 20px 10px 16px;
+    padding: 0;
+    border-bottom: none;
+  }
+}
