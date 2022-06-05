@@ -4,7 +4,7 @@ import {
   createSearchParams
 } from "react-router-dom";
 
-import { ProjectGrid, Select, Button, QuestionForm } from "../../components";
+import { ProjectGrid, Select, Button, QuestionForm, ProjectGridSkeleton } from "../../components";
 import { useGetProjects } from '../../hooks';
 import { ProjectCategory, ProjectIndustry } from "../../types";
 
@@ -66,7 +66,11 @@ export const Projects: FC = () => {
               />
             </div>
           </div>
-          {isLoading ? <>'Loading...'</> : <ProjectGrid list={data} />}
+          
+          {isLoading ? 
+            <ProjectGridSkeleton /> : 
+            <ProjectGrid list={data} />
+          }
         </div>
       </div>
       <div className={className + '__clients'}>

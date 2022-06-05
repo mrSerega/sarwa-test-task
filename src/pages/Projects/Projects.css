@@ -58,6 +58,16 @@
   text-align: center;
 }
 
+.projects__loading {
+  height: 100px;
+}
+
+.projects__spinner {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @media (max-width: 990px) {
   .projects__upper {
     padding: 0;
