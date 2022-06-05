@@ -20,7 +20,7 @@
 
 ### Stack
 
-1. app reacted with [create-react-app]((https://create-react-app.dev/))
+1. app created with [create-react-app]((https://create-react-app.dev/))
 2. [storybook](https://storybook.js.org/) for examples of components
 3. [jest](https://jestjs.io/ru/) + [testing library](https://testing-library.com/) for unit tests
 4. [msw](https://mswjs.io/) for client side mocks
