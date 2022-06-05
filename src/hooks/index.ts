@@ -1,1 +1,1 @@
-export { useGetProjects } from './useGetProjects'
+export * from './api'

@@ -1,7 +1,11 @@
-import { FC } from "react"
+import { FC, useContext } from "react"
+
+import { MenuContext } from "../Menu"
+
 import { LayoutView } from "./LayoutView"
 import { LayoutWrapperProps } from "./types"
 
 export const LayoutWrapper: FC<LayoutWrapperProps> = ({ children }) => {
-  return <LayoutView onMenuClick={() => console.log('MENU CLICK!')}>{children}</LayoutView>
+  const { open } = useContext(MenuContext)
+  return <LayoutView onMenuClick={open}>{children}</LayoutView>
 }
