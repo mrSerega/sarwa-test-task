@@ -39,6 +39,24 @@
   margin: 0 0 0 20px;
 }
 
+.projects__clients {
+  padding: 72px 182px 128px;
+  background-color: #F0F4F4;
+}
+
+.projects__clients-title {
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 86px;
+  text-align: center;
+}
+
+.projects__clients-text {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 27px;
+  text-align: center;
+}
 
 @media (max-width: 990px) {
   .projects__upper {

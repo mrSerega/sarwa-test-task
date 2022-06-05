@@ -1,0 +1,12 @@
+.text-field {
+  width: 100%;
+}
+
+.text-field__warning {
+  font-family: 'Arial';
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  color: #FF2929;
+  height: 15px;
+}

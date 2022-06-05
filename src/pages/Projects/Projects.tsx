@@ -4,7 +4,7 @@ import {
   createSearchParams
 } from "react-router-dom";
 
-import { ProjectGrid, Select, Button } from "../../components";
+import { ProjectGrid, Select, Button, QuestionForm } from "../../components";
 import { useGetProjects } from '../../hooks';
 import { ProjectCategory, ProjectIndustry } from "../../types";
 
@@ -69,6 +69,15 @@ export const Projects: FC = () => {
           {isLoading ? <>'Loading...'</> : <ProjectGrid list={data} />}
         </div>
       </div>
+      <div className={className + '__clients'}>
+        <div className={className + '__clients-title'}>
+          CLIENTS
+        </div>
+        <div className={className + '__clients-text'}>
+          We value a great working relationship with our clients above all else. It’s why they often come to our parties. It’s also why we’re able to challenge and inspire them to reach for the stars.
+        </div>
+      </div>
+      <QuestionForm />
     </div>
   );
 }

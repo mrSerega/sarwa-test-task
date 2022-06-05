@@ -14,3 +14,13 @@
   padding: 19px 42px;
   border-radius: 0;
 }
+
+.MuiButton-sizeLarge.button_disabled {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 17px;
+  color: #FFFFFF;
+  background: #939393;
+  padding: 19px 42px;
+  border-radius: 0;
+}

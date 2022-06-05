@@ -12,13 +12,15 @@ export const Button: FC<ButtonProps> = ({
   label,
   icon,
   size,
+  disabled,
   onClick,
 }) => (<MaterialButton 
     onClick={onClick} 
     variant={size === "small" ? "text" : "contained"} 
     endIcon={icon} 
-    className={className} 
+    className={className + (disabled ? '_disabled' : '')} 
     size={size} 
+    disabled={disabled}
   >
     {label}
   </MaterialButton>)
