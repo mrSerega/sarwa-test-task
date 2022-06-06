@@ -1,28 +1,51 @@
 import { rest } from 'msw'
-import { MOCK_PROJECT_LIST } from '../fixtures'
-import { ProjectCategory, ProjectIndustry } from '../types'
+import { MOCK_ACCOUNTS } from '../fixtures'
+import { Account, AccountStatus } from '../types'
+
+sessionStorage.setItem('accounts', JSON.stringify(MOCK_ACCOUNTS))
 
 export const handlers = [
-  rest.get('/projects', async (req, res, ctx) => {
+  rest.get('/accounts', async (req, res, ctx) => {
+    console.log('TEST')
+
     await new Promise((res, _rej) => {
       setTimeout(() => res(true), 1000)
     })
 
-    const searchIndustries = req.url.searchParams.getAll('industry')
-    const industries = searchIndustries.length === 0 ? Object.keys(ProjectIndustry) : searchIndustries
+    const accounts = JSON.parse(sessionStorage.getItem('accounts') ?? '') as Account[]
 
-    const searchCategories =  req.url.searchParams.getAll('category')
-    const categories = searchCategories.length === 0 ? Object.keys(ProjectCategory) : searchCategories
+    const searchStatuses = req.url.searchParams.getAll('status')
+    const statuses = searchStatuses.length === 0 ? Object.values(AccountStatus) : searchStatuses
 
     return res(
       ctx.status(200),
       ctx.json(
-        MOCK_PROJECT_LIST
+        accounts
           .filter(
-            project => 
-              industries.includes(project.industry) && categories.includes(project.category)
+            account => 
+              statuses.includes(account.status)
           )
-      )
+        )
     )
   }),
+  rest.post('/account', async (req, res, ctx) => {
+    if(req.body && typeof req.body === 'string') {
+      const body = JSON.parse(req.body)
+      let accounts = JSON.parse(sessionStorage.getItem('accounts') ?? '') as Account[]
+      accounts = accounts.map(account => {
+        if (account.id === body.id) {
+          return {
+            ...account,
+            status: body.status
+          }
+        }
+        return account
+      })
+
+      console.log('accounts', accounts)
+
+      sessionStorage.setItem('accounts', JSON.stringify(accounts))
+    }
+    ctx.status(200)
+  })
 ]

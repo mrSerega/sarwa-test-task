@@ -7,7 +7,7 @@
 ## start
 
 `npm start`
-`http://localhost:3000/projects`
+`http://localhost:3000/accounts`
 
 ## test
 
@@ -24,5 +24,5 @@
 2. [storybook](https://storybook.js.org/) for examples of components
 3. [jest](https://jestjs.io/ru/) + [testing library](https://testing-library.com/) for unit tests
 4. [msw](https://mswjs.io/) for client side mocks
-5. some components based on [mui](https://mui.com/)
+5. [mui](https://mui.com/) as a ui library
 6. for basic utils [lodash](https://lodash.com/)

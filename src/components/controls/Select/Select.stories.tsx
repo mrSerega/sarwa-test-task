@@ -9,7 +9,6 @@ export default {
 } as ComponentMeta<typeof Select>;
 
 export const Primary: ComponentStory<typeof Select> = () => <Select
-  label="label"
   defaultValue={["value"]}
   options={['value', 'value1', 'value2']}
   onChange={action('select-change')}
